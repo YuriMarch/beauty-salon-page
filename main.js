@@ -34,6 +34,12 @@ const swiper = new Swiper(".swiper", {
 	},
 	mousewheel: true,
 	keyboard: true,
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			setWrapperSize: true,
+		},
+	},
 });
 
 // Scroll Reveal shows the elements when scrolling the page
