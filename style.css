@@ -122,8 +122,10 @@ nav ul li a {
 	position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
 	color: var(--base-color);
+	font-weight: bold;
 }
 
 nav ul li a::after {
@@ -139,7 +141,8 @@ nav ul li a::after {
 	transition: width 0.2s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
 	width: 100%;
 }
 
@@ -303,7 +306,7 @@ nav.show div.icon-close {
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	top: -8.3%;
+	top: -15%;
 	right: 33%;
 	z-index: 0;
 }
@@ -564,6 +567,12 @@ footer .social a:hover {
 
 	nav .menu ul li a.title {
 		font: 400 1rem var(--body-font);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	nav .menu ul li a.title.active {
+		font-weight: bold;
+		-webkit-font-smoothing: auto;
 	}
 
 	nav .icon-menu {
